@@ -1,13 +1,11 @@
 import Babel from '@babel/standalone';
 import JSXDOMExpressions from 'babel-plugin-jsx-dom-expressions/lib/';
-import S from 's-js';
 import * as Solid from 'solid-js';
 import * as SolidDOM from 'solid-js/dom'
 
 // Lifted and modified to work with Solid from Surplus Toys https://github.com/adamhaile/surplus-toys
 window.Solid = Solid;
 window.SolidDOM = SolidDOM;
-window.S = S;
 
 document.addEventListener("DOMContentLoaded", compileSolid);
 
