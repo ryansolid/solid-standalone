@@ -1,5 +1,5 @@
 import Babel from '@babel/standalone';
-import JSXDOMExpressions from 'babel-plugin-jsx-dom-expressions/lib/';
+import JSXDOMExpressions from 'babel-plugin-jsx-dom-expressions/lib/plugin';
 import * as Solid from 'solid-js';
 import * as SolidDOM from 'solid-js/dom'
 
