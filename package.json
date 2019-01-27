@@ -1,7 +1,7 @@
 {
   "name": "solid-standalone",
   "description": "A browser compatible Solid.js compiler for demos and sandboxes",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "author": "Ryan Carniato",
   "license": "MIT",
   "repository": {
@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@babel/standalone": "^7.2.5",
-    "babel-plugin-jsx-dom-expressions": "~0.3.6",
+    "babel-plugin-jsx-dom-expressions": "~0.3.8",
     "rollup": "^1.1.0",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^4.0.0",
