@@ -7,7 +7,8 @@ import * as SolidDOM from 'solid-js/dom'
 window.Solid = Solid;
 window.SolidDOM = SolidDOM;
 
-document.addEventListener("DOMContentLoaded", compileSolid);
+if (Babel) document.addEventListener("DOMContentLoaded", compileSolid);
+else console.log('Babel not found. Scripts of type text/solid will not be precompiled.');
 
 function compileSolid() {
   let scriptIn,
