@@ -8,7 +8,7 @@ export default {
     file: 'index.js',
     format: 'iife',
     globals: {
-      '@babel/standalone': 'Babel'
+      '@babel/standalone': 'window.Babel'
     }
   },
   plugins: [nodeResolve(), commonjs(), terser()],
