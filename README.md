@@ -16,3 +16,19 @@ Intended for use in browsers. Exposes Solid and SolidDOM on the window object. T
   root(() => document.body.appendChild(<App />));
 </script>
 ```
+
+You can also use HyperScript instead to avoid Babel:
+```html
+<script src="https://unpkg.com/solid-standalone"></script>
+<script>
+  const { useState, root } = Solid;
+  const { h } = SolidDOM;
+
+  const App = () => {
+    const [state, setState] = useState({counter: 0});
+    setInterval(() => setState('counter', c => c + 1), 1000);
+    return h('div', () => state.counter);
+  }
+  root(() => document.body.appendChild(App()));
+</script>
+```
