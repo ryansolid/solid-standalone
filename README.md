@@ -6,14 +6,14 @@ Intended for use in browsers. Exposes Solid and SolidDOM on the window object. T
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script src="https://unpkg.com/solid-standalone"></script>
 <script type='text/solid'>
-  const { useState, root } = Solid;
+  const { createState, createRoot } = Solid;
 
   const App = () => {
-    const [state, setState] = useState({counter: 0});
+    const [state, setState] = createState({counter: 0});
     setInterval(() => setState('counter', c => c + 1), 1000);
     return <div>{( state.counter )}</div>
   }
-  root(() => document.body.appendChild(<App />));
+  createRoot(() => document.body.appendChild(<App />));
 </script>
 ```
 
@@ -21,14 +21,14 @@ You can also use HyperScript instead to avoid Babel:
 ```html
 <script src="https://unpkg.com/solid-standalone"></script>
 <script>
-  const { useState, root } = Solid;
+  const { createState, createRoot } = Solid;
   const { h } = SolidDOM;
 
   const App = () => {
-    const [state, setState] = useState({counter: 0});
+    const [state, setState] = createState({counter: 0});
     setInterval(() => setState('counter', c => c + 1), 1000);
     return h('div', () => state.counter);
   }
-  root(() => document.body.appendChild(App()));
+  createRoot(() => document.body.appendChild(App()));
 </script>
 ```
