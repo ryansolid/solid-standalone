@@ -23,7 +23,7 @@ Exposes Solid and SolidDOM on the window object. This library uses the Babel Sta
 
 ## Tagged Template Literals
 ```html
-<script src="https://unpkg.com/solid-standalone/html.js"></script>
+<script src="https://unpkg.com/solid-standalone/html.min.js"></script>
 <script>
   const { createState, createRoot } = Solid;
   const { html } = SolidHTML;
@@ -39,7 +39,7 @@ Exposes Solid and SolidDOM on the window object. This library uses the Babel Sta
 
 ## HyperScript
 ```html
-<script src="https://unpkg.com/solid-standalone/h.js"></script>
+<script src="https://unpkg.com/solid-standalone/h.min.js"></script>
 <script>
   const { createState, createRoot } = Solid;
   const { h } = SolidHyper;
