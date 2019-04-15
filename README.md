@@ -1,6 +1,6 @@
 # Solid.js Standalone
 
-Intended for use in browsers. It has 3 builds.
+Intended for use in browsers. It has 3 builds. Version 0.5.0 breaks all existing references.
 
 ## JSX
 
