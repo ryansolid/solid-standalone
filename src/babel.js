@@ -1,9 +1,9 @@
 import Babel from '@babel/standalone';
-import JSXDOMExpressions from 'babel-plugin-jsx-dom-expressions/lib/plugin';
+import JSXDOMExpressions from 'babel-plugin-jsx-dom-expressions';
 import * as Solid from 'solid-js';
-import * as SolidDOM from 'solid-js/dom'
+import * as SolidDOM from 'solid-js/dom';
 
-// Lifted and modified to work with Solid from Surplus Toys https://github.com/adamhaile/surplus-toys
+// Lifted and modified to work with Solid
 window.Solid = Solid;
 window.SolidDOM = SolidDOM;
 

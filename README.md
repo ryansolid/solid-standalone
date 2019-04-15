@@ -1,10 +1,14 @@
 # Solid.js Standalone
 
-Intended for use in browsers. Exposes Solid and SolidDOM on the window object. This library uses the Babel Standalone package to compile script tags with type='text/solid'. Using babel in the browser as you can imagine is expensive but it is useful for examples and trying Solid out.
+Intended for use in browsers. It has 3 builds.
+
+## JSX
+
+Exposes Solid and SolidDOM on the window object. This library uses the Babel Standalone package to compile script tags with type='text/solid'. Using babel in the browser as you can imagine is expensive but it is useful for examples and trying Solid out.
 
 ```html
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<script src="https://unpkg.com/solid-standalone"></script>
+<script src="https://unpkg.com/solid-standalone/babel.min.js"></script>
 <script type='text/solid'>
   const { createState, createRoot } = Solid;
 
@@ -17,12 +21,28 @@ Intended for use in browsers. Exposes Solid and SolidDOM on the window object. T
 </script>
 ```
 
-You can also use HyperScript instead to avoid Babel:
+## Tagged Template Literals
 ```html
-<script src="https://unpkg.com/solid-standalone"></script>
+<script src="https://unpkg.com/solid-standalone/html.js"></script>
 <script>
   const { createState, createRoot } = Solid;
-  const { h } = SolidDOM;
+  const { html } = SolidHTML;
+
+  const App = () => {
+    const [state, setState] = createState({counter: 0});
+    setInterval(() => setState('counter', c => c + 1), 1000);
+    return html`<div>{() => state.counter}</div>`;
+  }
+  createRoot(() => document.body.appendChild(App()));
+</script>
+```
+
+## HyperScript
+```html
+<script src="https://unpkg.com/solid-standalone/h.js"></script>
+<script>
+  const { createState, createRoot } = Solid;
+  const { h } = SolidHyper;
 
   const App = () => {
     const [state, setState] = createState({counter: 0});
