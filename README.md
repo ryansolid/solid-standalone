@@ -1,3 +1,6 @@
+# No Longer Supported
+Sufficient changes to the babel runtime to auto generate imports gets in the way of this modules functioning. I no longer have time to maintain it.
+
 # Solid.js Standalone
 
 Intended for use in browsers. It has 3 builds. Version 0.5.0 breaks all existing references.
@@ -31,7 +34,7 @@ Exposes Solid and SolidDOM on the window object. This library uses the Babel Sta
   const App = () => {
     const [state, setState] = createState({counter: 0});
     setInterval(() => setState('counter', c => c + 1), 1000);
-    return html`<div>{() => state.counter}</div>`;
+    return html`<div>${() => state.counter}</div>`;
   }
   createRoot(() => document.body.appendChild(App()));
 </script>
