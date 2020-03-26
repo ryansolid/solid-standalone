@@ -7,7 +7,7 @@ Removed Babel JSX version for the time being as it currently is unsupported in t
 <script src="https://unpkg.com/solid-standalone/html.min.js"></script>
 <script>
   const { createState, createRoot } = Solid;
-  const { html } = SolidHTML;
+  const { html } = SolidDOM;
 
   const App = () => {
     const [state, setState] = createState({counter: 0});
@@ -23,7 +23,7 @@ Removed Babel JSX version for the time being as it currently is unsupported in t
 <script src="https://unpkg.com/solid-standalone/h.min.js"></script>
 <script>
   const { createState, createRoot } = Solid;
-  const { h } = SolidHyper;
+  const { h } = SolidDOM;
 
   const App = () => {
     const [state, setState] = createState({counter: 0});

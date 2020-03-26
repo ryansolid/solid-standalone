@@ -1,7 +1,7 @@
 {
   "name": "solid-standalone",
   "description": "A browser compatible Solid.js compiler for demos and sandboxes",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "author": "Ryan Carniato",
   "license": "MIT",
   "repository": {
