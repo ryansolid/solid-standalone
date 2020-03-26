@@ -1,6 +1,6 @@
 # Solid.js Standalone
 
-Removed Babel JSX version for the time being as it is unsupported.
+Removed Babel JSX version for the time being as it currently is unsupported in the browser.
 
 ## Tagged Template Literals
 ```html
