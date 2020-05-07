@@ -1,20 +1,18 @@
 # Solid.js Standalone
 
-Removed Babel JSX version for the time being as it currently is unsupported in the browser.
-
 ## Tagged Template Literals
 ```html
 <script src="https://unpkg.com/solid-standalone/html.min.js"></script>
 <script>
-  const { createState, createRoot } = Solid;
-  const { html } = SolidDOM;
+  const { createState } = Solid;
+  const { html, render } = SolidDOM;
 
   const App = () => {
     const [state, setState] = createState({counter: 0});
     setInterval(() => setState('counter', c => c + 1), 1000);
     return html`<div>${() => state.counter}</div>`;
   }
-  createRoot(() => document.body.appendChild(App()));
+  render(App, document.body);
 </script>
 ```
 
@@ -22,14 +20,14 @@ Removed Babel JSX version for the time being as it currently is unsupported in t
 ```html
 <script src="https://unpkg.com/solid-standalone/h.min.js"></script>
 <script>
-  const { createState, createRoot } = Solid;
-  const { h } = SolidDOM;
+  const { createState } = Solid;
+  const { h, render } = SolidDOM;
 
   const App = () => {
     const [state, setState] = createState({counter: 0});
     setInterval(() => setState('counter', c => c + 1), 1000);
     return h('div', () => state.counter);
   }
-  createRoot(() => document.body.appendChild(App()));
+  render(App, document.body);
 </script>
 ```
