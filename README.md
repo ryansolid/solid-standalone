@@ -1,5 +1,9 @@
 # Solid.js Standalone
 
+## Deprecated!
+
+With ESM in the browser this module isn't really needed anymore and will no longer be maintained. You can import the `h` and `html` functions directly from `solid-js`.
+
 ## Tagged Template Literals
 ```html
 <script src="https://unpkg.com/solid-standalone/html.min.js"></script>
